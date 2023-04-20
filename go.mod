@@ -1,3 +1,3 @@
-module github.com/felixknutsen/mycrypt
+module github.com/FelixKnutsen/is105sem03/mycrypt
 
 go 1.19
