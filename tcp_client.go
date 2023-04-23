@@ -22,12 +22,12 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-
 	buf := make([]byte, 1024)
 	n, err := conn.Read(buf)
 	if err != nil {
 		log.Fatal(err)
 	}
 	dekryptertMelding := mycrypt.Krypter([]rune(string(buf[:n])), mycrypt.ALF_SEM03, len(mycrypt.ALF_SEM03)-4)
-	log.Printf("reply from proxy: %s", string(dekryptertMelding))
+	response := string(dekryptertMelding)
+	log.Printf("Svar fra serveren: %s", response)
 }
